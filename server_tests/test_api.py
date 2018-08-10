@@ -81,3 +81,6 @@ class MyAppTestCase(AioHTTPTestCase):
                                              'bangumiID': test_data.iqiyi1['_id'] + 'hello world'
                                          })
         self.assertEqual(resp.status, 400)
+
+#         web.post('/api/v0.1/refresh_token', refresh_auth_token),
+#         web.get('/oauth_callback', get_token),

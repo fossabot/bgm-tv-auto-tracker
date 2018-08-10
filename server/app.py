@@ -176,7 +176,6 @@ def create_app(io_loop=asyncio.get_event_loop()):
         web.get('/', redirect('https://github.com/Trim21/bilibili-bangumi-tv-auto-tracker')),
         web.get('/oauth_callback', get_token),
         web.get('/api/v0.2/querySubjectID', query_subject_id),
-        web.get('/auth', redirect(oauth_url))
     ])
     cors = aiohttp_cors.setup(app, defaults={
         "*": aiohttp_cors.ResourceOptions(
